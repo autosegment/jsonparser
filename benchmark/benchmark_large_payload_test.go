@@ -1,12 +1,12 @@
 /*
-   Each test should process 24kb json record (based on Discourse API)
-   It should read 2 arrays, and for each item in array get few fields.
-   Basically it means processing full JSON file.
+Each test should process 24kb json record (based on Discourse API)
+It should read 2 arrays, and for each item in array get few fields.
+Basically it means processing full JSON file.
 */
 package benchmark
 
 import (
-	"github.com/buger/jsonparser"
+	"github.com/autosegment/jsonparser"
 	"testing"
 	// "github.com/Jeffail/gabs"
 	// "github.com/bitly/go-simplejson"
@@ -19,7 +19,7 @@ import (
 )
 
 /*
-   github.com/buger/jsonparser
+github.com/autosegment/jsonparser
 */
 func BenchmarkJsonParserLarge(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -37,7 +37,7 @@ func BenchmarkJsonParserLarge(b *testing.B) {
 }
 
 /*
-   encoding/json
+encoding/json
 */
 func BenchmarkEncodingJsonStructLarge(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -93,7 +93,7 @@ func BenchmarkFFJsonLarge(b *testing.B) {
 }
 
 /*
-   github.com/mailru/easyjson
+github.com/mailru/easyjson
 */
 func BenchmarkEasyJsonLarge(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -112,7 +112,7 @@ func BenchmarkEasyJsonLarge(b *testing.B) {
 }
 
 /*
-   github.com/a8m/djson
+github.com/a8m/djson
 */
 func BenchmarkDjsonLarge(b *testing.B) {
 	for i := 0; i < b.N; i++ {

@@ -3,7 +3,7 @@ package benchmark
 import (
 	"testing"
 
-	"github.com/buger/jsonparser"
+	"github.com/autosegment/jsonparser"
 )
 
 func BenchmarkDeleteSmall(b *testing.B) {
